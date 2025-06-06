@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diritto ed Economia – Dipendenza e Indipendenza Statistica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .table-container {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 0.8rem;
+      border-left: 5px solid #0d6efd;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .table thead th {
+      background-color: #0d6efd;
+      color: #fff;
+      text-align: center;
+    }
+    .table tbody td {
+      text-align: center;
+    }
+    .navbar-nav .nav-link {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      transform: scale(1.2);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-journal-code me-2"></i>Sito di Gabriel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="project-work.html">Project Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="visite-aziendali.html">Visite Aziendali</a></li>
+          <li class="nav-item"><a class="nav-link" href="stage.html">Stage</a></li>
+          <li class="nav-item"><a class="nav-link" href="diritto-economia.html">Diritto - Economia</a></li>
+          <li class="nav-item"><a class="nav-link" href="Matematica.html">Matematica</a></li>
+          <li class="nav-item"><a class="nav-link" href="conclusioni.html">Conclusioni</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header  -->
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Matematica</h1>
+      <p class="lead">Dipendenza e Indipendenza Statistica alla Nettuno srl</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <h1 style="text-align: center; padding-bottom: 25px;">Produzione vs Mercato</h2>
+
+    <div class="row">
+      <!-- Tabella Osservata -->
+      <div class="col-md-6">
+        <div class="table-container">
+          <h4 class="mb-3">Tavola Osservata</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Prodotto \ Mercato</th>
+                <th>Italia</th>
+                <th>Estero</th>
+                <th>Totale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Gel Igienizzante</th>
+                <td>180</td>
+                <td>60</td>
+                <td>240</td>
+              </tr>
+              <tr>
+                <th>Crema Barriera</th>
+                <td>120</td>
+                <td>40</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <th>Soluzioni Disinfettanti</th>
+                <td>100</td>
+                <td>50</td>
+                <td>150</td>
+              </tr>
+              <tr class="fw-bold">
+                <td>Totale</td>
+                <td>400</td>
+                <td>150</td>
+                <td>550</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tabella Teorica (Indipendenza) -->
+      <div class="col-md-6">
+        <div class="table-container">
+          <h4 class="mb-3">Tavola Teorica (Indipendenza)</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Prodotto \ Mercato</th>
+                <th>Italia</th>
+                <th>Estero</th>
+                <th>Totale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Gel Igienizzante</th>
+                <td>400*240/550 ≈ 174</td>
+                <td>150*240/550 ≈ 66</td>
+                <td>240</td>
+              </tr>
+              <tr>
+                <th>Crema Barriera</th>
+                <td>400*160/550 ≈ 116</td>
+                <td>150*160/550 ≈ 44</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <th>Soluzioni Disinfettanti</th>
+                <td>400*150/550 ≈ 109</td>
+                <td>150*150/550 ≈ 41</td>
+                <td>150</td>
+              </tr>
+              <tr class="fw-bold">
+                <td>Totale</td>
+                <td>400</td>
+                <td>150</td>
+                <td>550</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4" style="text-align: center;"><em>Nota:</em> I valori nella Tavola Observata rappresentano il numero di unità prodotte da Nettuno Srl per ciascun prodotto (Gel Igienizzante, Crema Barriera, Soluzioni Disinfettanti) vendute sul mercato nazionale ed estero. La Tavola Teorica mostra i valori attesi sotto l’ipotesi di indipendenza statistica tra “Tipo di Prodotto” e “Mercato” (Italia / Estero). 
+      <br><br>Poiché le due tabelle non coincidono, concludiamo che i due caratteri X e Y <strong>non</strong> sono statisticamente <strong>indipendenti.</strong>
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Gabriel - Progetto PCTO</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
